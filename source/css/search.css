@@ -61,6 +61,7 @@
 
 .searchbox .searchbox-input-wrapper .searchbox-close:hover {
     color: #3273dc;
+    cursor: pointer;
 }
 
 .searchbox .searchbox-result-wrapper {

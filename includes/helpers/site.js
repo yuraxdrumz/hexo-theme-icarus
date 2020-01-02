@@ -11,7 +11,6 @@
 *     <%- word_count(content) %>
 *     <%- md5(data) %>
 *     <%- meta() %>
-*     <%- hexo_version() %>
  */
 const URL = require('url').URL;
 const moment = require('moment');
@@ -63,7 +62,7 @@ module.exports = function (hexo) {
     });
 
     hexo.extend.helper.register('md5', function (data) {
-        return crypto.createHash('md5').update(data).digest("hex");
+        return crypto.createHash('md5').update(data).digest("hex")
     });
 
     hexo.extend.helper.register('meta', function () {
@@ -98,9 +97,5 @@ module.exports = function (hexo) {
             return '<meta ' + entityArray.join(' ') + ' />';
         });
         return metaDOMArray.join('\n');
-    });
-
-    hexo.extend.helper.register('hexo_version', function (data) {
-        return hexo.version;
     });
 }
